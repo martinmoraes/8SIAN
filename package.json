@@ -1,0 +1,19 @@
+{
+  "name": "placeholder",
+  "version": "1.0.0",
+  "description": "praticando node",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Martin Morães",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^27.0.1",
+    "jest": "^27.0.6"
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.1"
+  }
+}
