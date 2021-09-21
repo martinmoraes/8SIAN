@@ -8,20 +8,13 @@ describe('FetchUserUseCase', () => {
     fetchUserUseCase = new FetchUserUseCase(requestService);
   });
 
-  it('Requisições simultaneas', () => {
+  it('Execute - Requisições simultaneas', () => {
     const data = {
       url: 'https://jsonplaceholder.typicode.com/users',
       max: 10,
     };
     const received = fetchUserUseCase.execute(data);
     expect(received).toBeTruthy();
-  });
-
-  it('Prepara URL', () => {
-    const url = 'https://jsonplaceholder.typicode.com/users';
-    const received = fetchUserUseCase.preparURL(url);
-    console.log(received);
-    expect(received.length).toBeGreaterThan(url.length);
   });
 
   describe('FetchRequest', () => {
@@ -40,6 +33,7 @@ describe('FetchUserUseCase', () => {
         ])
       );
     });
+
     it('FetchRequest ZERO', async () => {
       const data = {
         url: 'https://jsonplaceholder.typicode.com/users',
