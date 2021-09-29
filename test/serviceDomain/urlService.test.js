@@ -8,13 +8,13 @@ describe('URL Service', () => {
     expect(received.length).toBeGreaterThan(url.length);
   });
 
-  it.skip('Prepara URL sem número', () => {
+  it('Prepara URL sem número', () => {
     const url = 'https://jsonplaceholder.typicode.com/users';
     try {
       const received = UrlService.preparURL(url);
     } catch (error) {
       console.log(error);
-      expect(error).toEqual('[Error: Limite não é um número]');
+      expect(error.message).toEqual('Limite não é um número');
     }
   });
 });
